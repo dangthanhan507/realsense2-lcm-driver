@@ -5,6 +5,7 @@ load(
     "@bazel_tools//tools/build_defs/repo:http.bzl",
     "http_archive",
 )
+# load("@bazel_tools//tools/build_defs/repo:local.bzl", "local_repository")
 
 # ================ USING A GITHUB COPY OF DRAKE ================
 
@@ -34,3 +35,7 @@ def drake_repository():
             "https://github.com/RobotLocomotion/drake/archive/{}.tar.gz",
         ]],
     )
+    # local_repository(
+    #     name = "drake",
+    #     path = "/home/an/drake-1.12.0",
+    # )

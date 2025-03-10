@@ -7,7 +7,11 @@ workspace(name = "realsense2_lcm_driver")
 # to change which git commit is downloaded, refer to the comments in drake.bzl.
 load("//tools/workspace:drake.bzl", "drake_repository")
 
-drake_repository()
+# drake_repository()
+local_repository(
+    name = "drake",
+    path = "/home/an/drake-1.12.0",
+)
 
 # Run a helper rule that senses which OS we're using.
 load("//tools/workspace:os.bzl", "os_repository")
